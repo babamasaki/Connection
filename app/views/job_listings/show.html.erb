@@ -1,0 +1,63 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg_-2"></div>
+		<div class="col-lg-8">
+			<h1>応募詳細</h1>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td><strong>会社名</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.company.company_name %></td>
+					</tr>
+					<tr>
+						<td><strong>資本金</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.company.capital %></td>
+				    </tr>
+				    <tr>
+						<td><strong>職種</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.genre.genre %></td>
+				    </tr>
+					    <td><strong>場所</strong></td>
+					    <td></td>
+					　　<td><%= @job_listing.place %></td>
+					<tr>
+						<td><strong>時間</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.date_time %></td>
+				    </tr>
+				    <tr>
+						<td><strong>金額</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.price %></td>
+				    </tr>
+				    <tr>
+				    	<td><strong>詳細</strong></td>
+				    	<td></td>
+					　　<td><%= @job_listing.details %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8">
+			<%= form_for @entry, url:entries_path, method: :post do |e| %>
+				<%= e.hidden_field :user_id, :value => current_user.id %>
+				<%= e.hidden_field :contract_date, :value => Time.zone.now %>
+				<%= e.hidden_field :job_listing_id, :value => @job_listing.id %>
+				<!-- @job_listing.idはjob_listingの情報を持ってくるため -->
+			<%= e.submit '応募' %>
+			<% end %>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+</div>
+
+
+
+

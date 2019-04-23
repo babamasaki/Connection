@@ -1,0 +1,36 @@
+<h1>履歴一覧</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8">
+			<%= link_to 'top', top_path, class:"btn btn-primary" %>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>会社名</th>
+						<th>資本金</th>
+						<th>ジャンル</th>
+						<th>場所</th>
+						<th>値段</th>
+						<th>時間</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @job_listings.each do |job_listing| %>
+					<tr>
+						<td><%= job_listing.company.company_name %></td>
+						<td><%= job_listing.company.capital %></td>
+						<td><%= job_listing.genre.genre %></td>
+						<td><%= job_listing.place %></td>
+						<td><%= job_listing.price %>円</td>
+						<td><%= job_listing.date_time %></td>
+						<td><%= link_to "詳細", ad_job_listing_path(job_listing.id), class:"btn btn-primary" %></td>
+				    </tr>
+			    </tbody>
+			        <% end %>
+		    </table>
+	    </div>
+	    <div class="col-lg-2"></div>
+	</div>
+</div>

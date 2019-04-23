@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Connection</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <a class="navbar-brand" href="/">Connection</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+<!-- 個人ユーザでログインした場合 -->
+      <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto">
+          <li class="color_white">
+          </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item li_margin">
+            <%= link_to "　ホーム　", root_path, class: "btn btn-dark nav_margin"%>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "マイページ",mypage_path(current_user), class: "btn btn-dark nav_margin" %>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark nav_margin margin_right_footer" %>
+          </li>
+        </ul>
+        
+        <%= current_user.name %>
+      </div>
+
+      <!-- 法人でログインした場合 -->
+      <% elsif company_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto">
+          <li class="color_white">
+          </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item li_margin">
+            <%= link_to "　ホーム　", top_path, class: "btn btn-dark nav_margin"%>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark nav_margin margin_right_footer" %>
+          </li>
+        </ul>
+      </div>
+
+
+      <% else %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item li_margin">
+            <%= link_to "ホーム", root_path, class: "btn btn-dark nav_margin"%>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "個人ログイン", new_user_session_path, class: "btn btn-dark" %>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "個人新規作成", new_user_registration_path, class: "btn btn-dark margin_right_footer" %>
+          </li>
+
+          <li class="nav-item li_margin">
+            <%= link_to "法人様ログイン", new_company_session_path, class: "btn btn-dark" %>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "法人様新規作成", new_company_registration_path, class: "btn btn-dark margin_right_footer" %>
+          </li>
+          <li class="nav-item li_margin">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-dark nav_margin margin_right_footer" %>
+          </li>
+
+        </ul>
+      <% end %>
+
+
+    </nav>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

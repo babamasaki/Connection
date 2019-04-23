@@ -1,0 +1,39 @@
+<h1>新規募集</h1>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-1">
+		</div>
+		<%= link_to "戻る", :back %>
+		<div class="col-lg-10">
+			<%= form_for @job_listing ,url: ad_job_listings_path, method: :post do |f| %>
+			  <%= f.label :会社名 %><br>
+			  <%= current_company.company_name %><br>
+			  <%= f.label :資本金 %><br>
+			  <%= current_company.capital %><br>
+			  <!-- deviseで登録したcompanyを持ってくる -->
+			  <%= f.label :職種 %><br>
+			  <%= f.collection_select :genre_id, Genre.all,:id,:genre %><br>
+			   <!-- ジャンル名で指定できる -->
+			  <%= f.label :場所 %><br>
+			  <%= f.text_field :place %><br>
+			  <%= f.label :金額 %><br>
+			  <%= f.text_field :price %><br>
+			  <%= f.label :時間 %><br>
+			  <%= f.text_field :date_time %><br>
+			  <%= f.label :詳細 %><br>
+			  <%= f.text_area :details %><br>
+			  <%= f.submit '新規追加' %>
+			<% end %>
+		<div class="col-lg-1">
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+

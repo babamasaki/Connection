@@ -1,0 +1,74 @@
+
+<%= current_user.id %>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<h1><em>mypage</em></h1>
+
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="mypage col-lg-8">
+			<h3>お客様情報</h3>
+            <h3 class="margin_top">お客様情報確認画面</h3><br>
+            <div class="row margin_top">
+                <p><strong>お名前</strong></p>
+                <div>
+                	<%= @user.name %>様
+                </div>
+                <p><strong>電話番号</strong></p>
+                <div>
+                    <%= @user.phone_number %>
+                </div>
+                <p><strong>Eメール</strong></p>
+                <div>
+                    <%= @user.email %>
+                </div>
+                <p><strong>登録住所</strong></p>
+                <div>
+                    <%= @user.postcode %>
+                </div>
+                <p><strong>都道府県</strong></p>
+                <div>
+                    <%= @user.prefecture %>
+                </div>
+                <p><strong>市区町村</strong></p>
+                <div>
+                    <%= @user.city %>
+                </div>
+                <p><strong>番地</strong></p>
+                <div>
+                    <%= @user.street %>
+                </div>
+                <p"><strong>物件名</strong></p>
+                <div>
+                    <%= @user.building %>
+                </div>
+                <%= link_to "　　　　　　編集　　　　　　",edit_user_path(current_user.id),class: "btn btn-info margin_0" %>
+            </div>
+            <div class="col-1"></div>
+        </div>
+		<div class="col-lg-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="mypage col-lg-8">
+			<h3>応募履歴</h3>
+            <%= link_to "応募履歴一覧", entries_path %>
+		</div>
+		<div class="col-lg-2"></div>
+            <div class="block_50">
+            </div>
+            <div class="row">
+            </div>
+	</div>
+</div>
+
+
+    
+
+
+

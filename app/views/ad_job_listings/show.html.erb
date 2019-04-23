@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-1">
+		</div>
+		<div class="col-lg-10">
+			<h1>募集詳細</h1>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td><strong>会社名</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.company.company_name %></td>
+					</tr>
+					<tr>
+						<td><strong>資本金</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.company.capital %></td>
+				    </tr>
+				    <tr>
+						<td><strong>職種</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.genre.genre %></td>
+				    </tr>
+					    <td><strong>場所</strong></td>
+					    <td></td>
+					　　<td><%= @job_listing.place %></td>
+					<tr>
+						<td><strong>時間</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.date_time %></td>
+				    </tr>
+				    <tr>
+						<td><strong>金額</strong></td>
+						<td></td>
+					　　<td><%= @job_listing.price %></td>
+				    </tr>
+				    <tr>
+				    	<td><strong>詳細</strong></td>
+				    	<td></td>
+					　　<td><%= @job_listing.details %></td>
+					</tr>
+				</tbody>
+			</table>
+	    </div>
+	    			<%= link_to "戻る", :back %>
+	    <div class="col-lg-1">
+	    </div>
+    </div>
+</div>

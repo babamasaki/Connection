@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12"><br><br>
+            <h3 class="margin_top"><strong>お客様情報編集画面</strong></h3><br>
+            <div class="row margin_top">
+                <%= form_for @company, method: :patch  do |f| %>
+                <p class=""><strong>お名前</strong></p>
+                <div class="">
+                    <%= f.text_field :company_name %>
+                </div><br>
+                <p class=""><strong>電話番号</strong></p>
+                <div class="">
+                    <%= f.text_field :phone_number %>
+                </div><br>
+                <p class=""><strong>Eメールアドレス</strong></p>
+                <div class="">
+                    <%= f.text_field :email %>
+                </div><br>
+                <div class="">
+                <p class=""><strong>郵便番号</strong></p>
+                    <%= f.text_field :postcode %>
+                </div><br>
+                <p class=""><strong>都道府県</strong></p>
+                <div class="">
+                    <%= f.text_field :prefecture %>
+                </div><br>
+                <p class=""><strong>市区町村</strong></p>
+                <div class="">
+                    <%= f.text_field :city %>
+                </div><br>
+                <p class=""><strong>番地</strong></p>
+                <div class="">
+                    <%= f.text_field :street %>
+                    </div><br>
+                <p class=""><strong>物件名</strong></p>
+                <div class="">
+                    <%= f.text_field :building %>
+                </div><br>
+                <%= link_to "戻る", :back %>
+                <%= f.submit "編集完了" %>
+
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<h1>company top</h1>
+
+<%= current_company.company_name %>
+<div class="container">
+	    <%if flash[:notice]%>
+        <%=flash[:notice]%>
+        <% end %>
+	<div class="row">
+		<%= link_to '編集', edit_company_path(Company), class:"btn btn-primary" %>
+		<%= link_to '新規登録', new_ad_job_listing_path, class:"btn btn-primary" %>
+		<%= link_to '一覧', ad_job_listings_path, class:"btn btn-primary" %>
+	</div>
+	<div class="row">
+        <div class="col-1"></div>
+        <div class="col-9"><br><br>
+            <h3 class="margin_top"><strong>お客様情報確認画面</strong></h3><br>
+            <div class="row margin_top">
+                </div>
+                <p class="col-2"><strong>お名前</strong></p>
+                <div class="col-10">
+                    <%= @company.company_name %>
+                </div>
+                <p class="col-2"><strong>電話番号</strong></p>
+                <div class="col-10">
+                    <%= @company.phone_number %>
+                </div>
+                <p class="col-2"><strong>Eメール</strong></p>
+                <div class="col-10">
+                    <%= @company.email %>
+                </div>
+                <p class="col-2"><strong>登録住所</strong></p>
+                <div class="col-10">
+                    <%= @company.postcode %>
+                </div>
+                <p class="col-2"><strong>都道府県</strong></p>
+                <div class="col-10">
+                    <%= @company.prefecture %>
+                </div>
+                <p class="col-2"><strong>市区町村</strong></p>
+                <div class="col-10">
+                    <%= @company.city %>
+                </div>
+                <p class="col-2"><strong>番地</strong></p>
+                <div class="col-10">
+                    <%= @company.street %>
+                </div>
+                <p class="col-2"><strong>物件名</strong></p>
+                <div class="col-10">
+                    <%= @company.building %>
+                </div>
+                <%= link_to "　　　　　　編集　　　　　　",edit_company_path(current_company.id),class: "btn btn-info margin_0" %>
+            </div>
+            <div class="col-1"></div>
+	</div>
+</div>
