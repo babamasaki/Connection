@@ -1,12 +1,9 @@
-<h1>新規募集</h1>
-
-
 <div class="container">
 	<div class="row">
 		<div class="col-lg-1">
 		</div>
-		<%= link_to "戻る", :back %>
 		<div class="col-lg-10">
+			<h1>新規募集</h1>
 			<%= form_for @job_listing ,url: ad_job_listings_path, method: :post do |f| %>
 			  <%= f.label :会社名 %><br>
 			  <%= current_company.company_name %><br>
@@ -24,7 +21,7 @@
 			  <%= f.text_field :date_time %><br>
 			  <%= f.label :詳細 %><br>
 			  <%= f.text_area :details %><br>
-			  <%= f.submit '新規追加' %>
+			  <%= f.submit '新規追加', class: "company_cp_btn" %>
 			<% end %>
 		<div class="col-lg-1">
 		</div>

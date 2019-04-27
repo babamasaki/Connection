@@ -1,34 +1,34 @@
 <body>
 	<div class="container">
-	<h1>JobListings#index</h1>
 	   <div class="row">
 	   	<div class="col-lg-1"></div>
 	   	<div class="col-lg-10">
 		   		<% @job_listings.each do |job_listing| %>
+		   			<%= link_to job_listing_path(job_listing) do %>
 		   	<div class="job_listing_table">
-		   		<table width="200px">
-			   	    <tbody>
-					    <tr>
-						    <td><strong><%= job_listing.company.company_name %></strong></td>
-						</tr>
-						<tr>
-							<td><strong><%= job_listing.company.capital %></strong></td>
-						</tr>
-						<tr>
-							<td><strong><%= job_listing.genre.genre %></strong></td>
-						</tr>
-						<tr>
-							<td><strong><%= job_listing.place %></strong></td>
-						</tr>
-						<tr>
-							<td><strong><%= job_listing.price %>円</strong></td>
-						</tr>
-						<tr>
-							<td><strong><%= link_to "詳細", job_listing_path(job_listing.id)%></strong></td>
-						</tr>
-					</tbody>
-			    </table>
+		   		<div class="border">
+			   		<table width="200px">
+				   	    <tbody>
+				   	    	<tr>
+								<td><strong><%= job_listing.genre.genre %></strong></td>
+							</tr>
+						    <tr>
+							    <td><strong><%= job_listing.company.company_name %></strong></td>
+							</tr>
+							<tr>
+								<td><strong><%= job_listing.date_time %></strong></td>
+							</tr>
+							<tr>
+								<td><strong><%= job_listing.place %></strong></td>
+							</tr>
+							<tr>
+								<td><strong><%= job_listing.price %>円</strong></td>
+							</tr>
+						</tbody>
+				    </table>
+				</div>
 			</div>
+			    <% end %>
 			    <% end %>
 	   	</div>
 	   	<div class="col-lg-1"></div>

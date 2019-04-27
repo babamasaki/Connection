@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'top' => 'companies#top',as: "top"
   resources :message, only: [:new, :edit, :update, :create, :destroy]
   resources :ad_job_listings, only: [:new, :index, :create, :show, :edit, :update, :destroy]
-  resources :companies, only: [:edit, :update, :destroy]
+  resources :companies, only: [:edit, :update, :destroy, :show]
   resources :entries, only: [:index, :create, :show]
   resources :job_listings, only: [:index, :create, :show]
   get 'job_listing_cmp' => 'job_listings#job_listing_cmp'

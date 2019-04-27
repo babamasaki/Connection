@@ -4,6 +4,7 @@ x = 0
 3.times do
     z += 1
     User.seed do |s|
+        s.name = "user#{z}"
         s.email = "user#{z}@com"
         s.password = "asdasd"
         s.phone_number = "070-0000-0000-#{z}"

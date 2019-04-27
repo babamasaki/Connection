@@ -1,41 +1,45 @@
 <div class="container">
 	<div class="row">
-        <table class="table">
-			<tbody>
-				<tr>
-					<td><strong>会社名</strong></td>
-					<td></td>
-				　　<td><%= @entry.job_listing.company.company_name %></td>
-				</tr>
-				<tr>
-					<td><strong>資本金</strong></td>
-					<td></td>
-				　　<td><%= @entry.job_listing.company.capital %></td>
-			    </tr>
-			    <tr>
-					<td><strong>職種</strong></td>
-					<td></td>
-				　　<td><%= @entry.job_listing.genre.genre %></td>
-			    </tr>
-				    <td><strong>場所</strong></td>
-				    <td></td>
-				　　<td><%= @entry.job_listing.place %></td>
-				<tr>
-					<td><strong>時間</strong></td>
-					<td></td>
-				　　<td><%= @entry.job_listing.date_time %></td>
-			    </tr>
-			    <tr>
-					<td><strong>金額</strong></td>
-					<td></td>
-				　　<td><%= @entry.job_listing.price %></td>
-			    </tr>
-			    <tr>
-			    	<td><strong>詳細</strong></td>
-			    	<td></td>
-				　　<td><%= @entry.job_listing.details %></td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+	        <table class="table">
+				<tbody>
+					<tr>
+						<td><strong>会社名</strong></td>
+						<td></td>
+					　　<td><%= @entry.job_listing.company.company_name %></td>
+					</tr>
+					<tr>
+						<td><strong>資本金</strong></td>
+						<td></td>
+					　　<td><%= @entry.job_listing.company.capital %></td>
+				    </tr>
+				    <tr>
+						<td><strong>職種</strong></td>
+						<td></td>
+					　　<td><%= @entry.job_listing.genre.genre %></td>
+				    </tr>
+					    <td><strong>場所</strong></td>
+					    <td></td>
+					　　<td><%= @entry.job_listing.place %></td>
+					<tr>
+						<td><strong>時間</strong></td>
+						<td></td>
+					　　<td><%= @entry.job_listing.date_time %></td>
+				    </tr>
+				    <tr>
+						<td><strong>金額</strong></td>
+						<td></td>
+					　　<td><%= @entry.job_listing.price %>円</td>
+				    </tr>
+				    <tr>
+				    	<td><strong>詳細</strong></td>
+				    	<td></td>
+					　　<td><%= @entry.job_listing.details %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-1"></div>
 	</div>
 </div>

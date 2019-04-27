@@ -1,2 +1,45 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h3><strong>お客様情報編集画面</strong></h3>
+                <%= form_for @user, method: :patch  do |f| %>
+                <p><strong>お名前</strong></p>
+                <div>
+                    <%= f.text_field :name %>
+                </div><br>
+                <p><strong>電話番号</strong></p>
+                <div>
+                    <%= f.text_field :phone_number %>
+                </div><br>
+                <p><strong>Eメールアドレス</strong></p>
+                <div>
+                    <%= f.text_field :email %>
+                </div><br>
+                <div>
+                <p><strong>郵便番号</strong></p>
+                    <%= f.text_field :postcode %>
+                </div><br>
+                <p><strong>都道府県</strong></p>
+                <div>
+                    <%= f.text_field :prefecture %>
+                </div><br>
+                <p><strong>市区町村</strong></p>
+                <div>
+                    <%= f.text_field :city %>
+                </div><br>
+                <p><strong>番地</strong></p>
+                <div>
+                    <%= f.text_field :street %>
+                    </div><br>
+                <p><strong>物件名</strong></p>
+                <div>
+                    <%= f.text_field :building %>
+                </div><br>
+                <%= f.submit "編集完了", class: "user_cp_btn" %>
+
+                <% end %>
+        </div>
+        <div class="col-lg-2"></div>
+	</div>
+</div>

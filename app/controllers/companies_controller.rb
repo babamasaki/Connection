@@ -25,6 +25,12 @@ class CompaniesController < ApplicationController
       @company = Company.find(current_company.id)
     end
   end
+
+  def show
+    if company_signed_in?
+      @company = Company.find(current_company.id)
+    end
+  end
 private
   def companies_params
   	params.require(:company).permit(:genre_id, :company_name, :photo_id, :capital, :emoloyee_number,:phone_number, :postcode, :prefecture, :city, :street, :building)

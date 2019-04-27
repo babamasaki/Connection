@@ -1,55 +1,50 @@
-<h1>company top</h1>
-
-<%= current_company.company_name %>
 <div class="container">
+    <div class="row">
 	    <%if flash[:notice]%>
         <%=flash[:notice]%>
         <% end %>
-	<div class="row">
-		<%= link_to '編集', edit_company_path(Company), class:"btn btn-primary" %>
-		<%= link_to '新規登録', new_ad_job_listing_path, class:"btn btn-primary" %>
-		<%= link_to '一覧', ad_job_listings_path, class:"btn btn-primary" %>
 	</div>
 	<div class="row">
-        <div class="col-1"></div>
-        <div class="col-9"><br><br>
-            <h3 class="margin_top"><strong>お客様情報確認画面</strong></h3><br>
-            <div class="row margin_top">
-                </div>
-                <p class="col-2"><strong>お名前</strong></p>
-                <div class="col-10">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h3><strong>お客様情報確認画面</strong></h3><br>
+            <div>
+                <p><strong>お名前</strong></p>
+                <div>
                     <%= @company.company_name %>
                 </div>
-                <p class="col-2"><strong>電話番号</strong></p>
-                <div class="col-10">
+                <p><strong>電話番号</strong></p>
+                <div>
                     <%= @company.phone_number %>
                 </div>
-                <p class="col-2"><strong>Eメール</strong></p>
-                <div class="col-10">
+                <p><strong>Eメール</strong></p>
+                <div>
                     <%= @company.email %>
                 </div>
-                <p class="col-2"><strong>登録住所</strong></p>
-                <div class="col-10">
+                <p><strong>登録住所</strong></p>
+                <div>
                     <%= @company.postcode %>
                 </div>
-                <p class="col-2"><strong>都道府県</strong></p>
-                <div class="col-10">
+                <p><strong>都道府県</strong></p>
+                <div>
                     <%= @company.prefecture %>
                 </div>
-                <p class="col-2"><strong>市区町村</strong></p>
-                <div class="col-10">
+                <p><strong>市区町村</strong></p>
+                <div>
                     <%= @company.city %>
                 </div>
-                <p class="col-2"><strong>番地</strong></p>
-                <div class="col-10">
+                <p><strong>番地</strong></p>
+                <div>
                     <%= @company.street %>
                 </div>
-                <p class="col-2"><strong>物件名</strong></p>
-                <div class="col-10">
+                <p><strong>物件名</strong></p>
+                <div>
                     <%= @company.building %>
                 </div>
-                <%= link_to "　　　　　　編集　　　　　　",edit_company_path(current_company.id),class: "btn btn-info margin_0" %>
+                <div class="block_10"></div>
+                <%= link_to "　編集　",edit_company_path(current_company.id),class: "company_cp_btn" %>
             </div>
-            <div class="col-1"></div>
+        </div>
+        <div class="col-lg-2"></div>
 	</div>
 </div>
