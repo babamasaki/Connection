@@ -26,15 +26,8 @@
     margin-bottom: 80px;
 }
 
-.p{
-  width: 200px;
-  height:200px;
-}
-
 .border{
-   border-style: solid double;
-   border-color: black;
-   padding: 10px;
+   border: 10px groove #fff;
 }
 
 .block_10 {
@@ -279,7 +272,7 @@ footer {
 
 
 .anime_test {
-    display:  block;                /* ブロック要素にする */
+    display:  block;           /* ブロック要素にする */
     margin: 0 auto;                 /* 要素中央揃え */
     position:  relative;            /* 位置指定 */
     animation: anime1 3s ease;
@@ -299,7 +292,30 @@ footer {
     }
 }
 
+/*company 付箋*/
+.tag {
+  padding: 0;
+  position: relative;
+  border-left: solid 6px #2196F3;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+}
+
+h1 {
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 3px #2196F3;
+}
 
 
+.edit_company{
+  display: inline-block;      /* インラインブロック要素にする */
+    margin-bottom: 1px;
+}
 
+.background_color{
+  background-color: #0040C1;
+  height: 730px;
+}
 

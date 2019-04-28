@@ -2,12 +2,12 @@
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
-            <h3>応募履歴一覧</h3>
+            <h1><em>応募履歴一覧</em></h1>
             <% @entrys.each do |e| %>
              <%= link_to entry_path(e) do %>
                 <div class="job_listing_table">
                     <div class="border">
-                        <table class="p">
+                        <table width="200px">
                             <tbody>
                                 <tr>
                                    <td><%= e.contract_date.strftime('%Y年%m月%d日') %></td>

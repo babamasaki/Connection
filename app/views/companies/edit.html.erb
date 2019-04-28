@@ -2,16 +2,16 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <h3><strong>お客様情報編集画面</strong></h3>
+            <h1><em>お客様情報編集画面</em></h1>
                 <%= form_for @company, method: :patch  do |f| %>
                 <p><strong>お名前</strong></p>
                 <div>
                     <%= f.text_field :company_name %>
-                </div><br>
+                </div>
+                <div class="edit_company">
                 <p><strong>電話番号</strong></p>
-                <div>
-                    <%= f.text_field :phone_number %>
-                </div><br>
+                    <%= f.text_field :phone_number %><br>
+                </div>
                 <p><strong>Eメールアドレス</strong></p>
                 <div>
                     <%= f.text_field :email %>
@@ -31,7 +31,7 @@
                 <p><strong>番地</strong></p>
                 <div>
                     <%= f.text_field :street %>
-                    </div><br>
+                </div><br>
                 <p><strong>物件名</strong></p>
                 <div>
                     <%= f.text_field :building %>

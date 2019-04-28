@@ -1,49 +1,51 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-
-
-            <h2>Sign up</h2>
-
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-              <%= render "devise/shared/error_messages", resource: resource %>
-
-            <div class="field">
-                <%= f.label :お名前 %><br />
-                <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+<div class="background_color text-center">
+  <%= image_tag "28042019071841A.png" %>
+   <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 panel panel-default text-center">
+              <div class="panel-heading">
+                  <h2>新規登録</h2>
               </div>
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
 
-              <div class="field">
-                <%= f.label :電話番号 %><br />
-                <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
-              </div>
+                <div class="field">
+                    <%= f.label :お名前 %><br />
+                    <%= f.text_field :name, autofocus: true, autocomplete: "name",:size=>"60" %>
+                  </div>
 
-              <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-              </div>
+                  <div class="field">
+                    <%= f.label :電話番号 %><br />
+                    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number",:size=>"60" %>
+                  </div>
 
-              <div class="field">
-                <%= f.label :password %>
-                <% if @minimum_password_length %>
-                <em>(<%= @minimum_password_length %> characters minimum)</em>
-                <% end %><br />
-                <%= f.password_field :password, autocomplete: "new-password" %>
-              </div>
+                  <div class="field">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email",:size=>"60" %>
+                  </div>
 
-              <div class="field">
-                <%= f.label :password_confirmation %><br />
-                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-              </div>
+                  <div class="field">
+                    <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br />
+                    <%= f.password_field :password, autocomplete: "new-password",:size=>"60" %>
+                  </div>
 
-              <div class="actions">
-                <%= f.submit "Sign up" %>
-              </div>
-            <% end %>
+                  <div class="field">
+                    <%= f.label :password_confirmation %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password",:size=>"60" %>
+                  </div>
 
-            <%= render "devise/shared/links" %>
+                  <div class="actions">
+                    <%= f.submit "Sign up" %>
+                  </div>
+                <% end %>
+
+                <%= render "devise/shared/links" %>
+            </div>
         </div>
-        <div class="col-lg-2"></div>
-    </div>
+        <div class="col-lg-1"></div>
+   </div>
 </div>

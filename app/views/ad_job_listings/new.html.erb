@@ -3,7 +3,7 @@
 		<div class="col-lg-1">
 		</div>
 		<div class="col-lg-10">
-			<h1>新規募集</h1>
+			<h1><em>新規募集</em></h1>
 			<%= form_for @job_listing ,url: ad_job_listings_path, method: :post do |f| %>
 			  <%= f.label :会社名 %><br>
 			  <%= current_company.company_name %><br>
