@@ -2,24 +2,25 @@
 	<div class="row">
 		<div class="col-lg-1"></div>
 		<div class="col-lg-10">
-	       <h1><em>応募状況確認画面</em></h1>
-	   </div>
-	   <div class="col-lg-1"></div>
-    </div>
-    <div class="block_30"></div>
+			<h1><em>応募状況確認画面</em></h1>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	<div class="block_30"></div>
 	<div class="row">
 		<div class="col-lg-1"></div>
 		<div class="col-lg-10">
-				<% current_company.job_listings.each do |job_listing| %>
-	            <% job_listing.entries.each do |entry| %>
-	            <div class="tag">
-	            ID: <%= entry.job_listing.id%>の求人（<%= job_listing.details %>）に応募がありました<br>
-	                <%= entry.created_at.strftime('%Y年%m月%d日 %H:%M') %><br>
-	                応募ID: <%= entry.id %> <%= entry.user.name %>さん 電話番号　<%= entry.user.phone_number %><br>
-	            </div>
-	            <% end %>
-	        <% end %>
+			<% current_company.job_listings.each do |job_listing| %>
+				<% job_listing.entries.each do |entry| %>
+					<div class="tag">
+						ID: <%= entry.job_listing.id%>の求人（<%= job_listing.details %>）に応募がありました<br>
+						<%= entry.created_at.strftime('%Y年%m月%d日 %H:%M') %><br>
+						応募ID: <%= entry.id %> <%= entry.user.name %>さん 電話番号　<%= entry.user.phone_number %><br>
+					</div>
+				<% end %>
+			<% end %>
 		</div>
 		<div class="col-lg-1"></div>
 	</div>
 </div>
+

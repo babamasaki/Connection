@@ -67,3 +67,4 @@ gem 'jquery-rails'
 gem 'pry-rails'
 gem 'seed-fu'
 gem 'kaminari', '~> 0.17.0'
+# kaminariは実装しなかったため、削除予定です。
