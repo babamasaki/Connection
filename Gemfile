@@ -66,5 +66,5 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'pry-rails'
 gem 'seed-fu'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 # kaminariは実装しなかったため、削除予定です。
